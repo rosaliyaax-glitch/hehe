@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Letters 📜✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="emoji-drop-canvas"></canvas>
+
+    <div id="audio-player-placeholder" style="position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;"></div>
+
+    <div class="diary-vault-wrapper">
+        <div class="diary-spine-binding"></div>
+        
+        <div class="diary-inside-page">
+            <div class="diary-header">
+                <h1>𝒯𝒽𝑒 𝐿𝑜𝓈𝓉 𝒜𝓁𝒷𝓊𝓂</h1>
+                <p class="diary-subtitle">Open a crusty scroll from the collection below... ✨</p>
+            </div>
+
+            <div class="diary-scroll-grid" id="scroll-shelf"></div>
+
+            <div class="secret-bookmark-zone" id="secret-trigger-zone">
+                <button class="pull-bookmark-btn" onclick="revealGrandFinale()">🔖 PULL ME! 🔖</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="parchment-overlay" id="scroll-modal">
+        <div class="scroll-unroll-container">
+            <div class="wood-spindle-rod left-rod"></div>
+            
+            <div class="crusty-paper-sheet">
+                <div class="sheet-top-controls">
+                    <h2 id="modal-scroll-title">Scroll Title</h2>
+                    <button class="close-diary-btn" onclick="closeScroll()">✕</button>
+                </div>
+                
+                <div class="handwritten-letter-text" id="modal-scroll-body"></div>
+                
+                <div class="track-indicator-badge">
+                    <span>🎵</span> Streaming Track: <span id="current-track-label">Track</span>
+                </div>
+            </div>
+
+            <div class="wood-spindle-rod right-rod"></div>
+        </div>
+    </div>
+
+    <div class="finale-overlay" id="finale-modal">
+        <div class="pressed-flower-card">
+            <button class="close-diary-btn finale-exit" onclick="closeFinale()">✕</button>
+            
+            <div class="pressed-bouquet-header">🌹💐 Mwhehe💐🌹</div>
+            
+            <div class="vintage-photo-polaroid">
+                <img src="album_cover.jpg" alt="Our Special Memory" class="polaroid-snapshot" onerror="this.style.display='none'; document.getElementById('img-fallback').style.display='block';">
+                <div id="img-fallback" style="display:none; padding: 40px 10px; color: #8b7355; font-size: 0.85rem; font-style: italic;">[ Drop your image file named 'album_cover.jpg' inside your GitHub repository folder to display your custom photo here! 📷 ]</div>
+                <div class="vintage-caption">Captured Memory ✨</div>
+            </div>
+
+            <div class="antique-birthday-seal">
+                <p class="antique-hbd-text">🎂 HAPPY BIRTHDAY MY LOVEE!!! 🥳</p>
+                <p class="antique-hbd-sub">Thanks for not getting rid of me, even when I was a "dude" named Tenge😭🙏…</p>
+            </div>
+
+            <div class="handwritten-promise-block">
+hehe I promise I'll keep annoying you, bullying you with my terrible jokes, and calling you names you definitely don't deserve 💀
+But more importantly, I'll keep being there for you, cheering you on, and reminding you that you're worth more than you think.
+
+So here's to all the memories we've already made... and all the ones we haven't written yet. 🌸
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>
