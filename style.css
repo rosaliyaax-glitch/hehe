@@ -1,0 +1,427 @@
+/* --- Clean Neutral Palette & Environmental Foundation --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fdfbf7; /* Off-white linen neutral canvas tone */
+    color: #4a3c31;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+#emoji-drop-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- Vintage Kraft Leather/Cardboard Diary Case Architecture --- */
+.diary-vault-wrapper {
+    width: 100%;
+    max-width: 850px;
+    background: #fdfaf2; 
+    border: 3px solid #d4c5b3;
+    border-radius: 12px;
+    box-shadow: 0 20px 45px rgba(90, 75, 60, 0.15);
+    display: flex;
+    min-height: 550px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.diary-spine-binding {
+    width: 35px;
+    background: linear-gradient(90deg, #8b7355 0%, #a68c6d 50%, #735d41 100%);
+    box-shadow: inset -3px 0 10px rgba(0,0,0,0.2);
+}
+
+.diary-inside-page {
+    flex: 1;
+    padding: 40px 35px;
+    background-image: radial-gradient(rgba(212, 197, 179, 0.15) 1px, transparent 0);
+    background-size: 24px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.diary-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px double #d4c5b3;
+    padding-bottom: 20px;
+}
+
+.diary-header h1 {
+    font-size: 2.6rem;
+    color: #5c4a3c;
+    font-weight: normal;
+}
+
+.diary-subtitle {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #8b7865;
+    margin-top: 6px;
+}
+
+/* Scroll Grid Deck Layout */
+.diary-scroll-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 25px;
+    flex: 1;
+}
+
+/* --- Custom Crusty Rolled Up Manuscript Targets --- */
+.scroll-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.scroll-item:hover {
+    transform: translateY(-5px);
+}
+
+.scroll-icon-header {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.scroll-cylinder-body {
+    width: 85px;
+    height: 48px;
+    background: #f4ebd0; /* Crusty sepia parchment roll color */
+    border: 2px solid #b8a98f;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(90, 75, 60, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.scroll-item:hover .scroll-cylinder-body {
+    background: #eae0c2;
+}
+
+/* Darker distressed string wrapping tied around the center of the scroll */
+.scroll-string-tie {
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #8b5a2b; 
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 1px 0 3px rgba(0,0,0,0.15);
+}
+
+.scroll-label-tag {
+    position: absolute;
+    bottom: -8px;
+    background: #fff;
+    border: 1px solid #c8b99d;
+    padding: 1px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    color: #7a6652;
+}
+
+.scroll-caption-text {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #5c4a3c;
+    text-align: center;
+}
+
+/* --- Horizontal Unrolling Scroll Animation Overlay Engine --- */
+.parchment-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(40, 35, 30, 0.5);
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.scroll-unroll-container {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 650px;
+    animation: unrollScrollHorizontal 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+/* Triggers authentic horizontal roll unfolding animation outward */
+@keyframes unrollScrollHorizontal {
+    0% { transform: scaleX(0.1); opacity: 0; }
+    100% { transform: scaleX(1); opacity: 1; }
+}
+
+.wood-spindle-rod {
+    width: 14px;
+    background: linear-gradient(90deg, #5c4a3c 0%, #8b7355 50%, #423429 100%);
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.crusty-paper-sheet {
+    flex: 1;
+    background: #fcf6e8; /* Crusty antiqued interior letter surface */
+    border-top: 4px solid #e6dcc5;
+    border-bottom: 4px solid #e6dcc5;
+    padding: 30px;
+    min-height: 280px;
+    max-height: 75vh;
+    overflow-y: auto;
+    box-shadow: inset 0 0 30px rgba(139, 115, 85, 0.15), 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 6px 0;
+}
+
+.sheet-top-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #c8b99d;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+}
+
+.sheet-top-controls h2 {
+    font-size: 1.25rem;
+    color: #5c4a3c;
+    font-weight: normal;
+}
+
+.close-diary-btn {
+    background: #8b7355;
+    color: #fdfbf7;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.close-diary-btn:hover {
+    background: #5c4a3c;
+}
+
+/* Handwritten script engine text styling */
+.handwritten-letter-text {
+    font-family: 'Courier New', Courier, monospace; /* Keeps authentic typed manuscript styling */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #3d3128;
+    white-space: pre-wrap;
+    padding-bottom: 25px;
+    font-weight: bold;
+}
+
+.track-indicator-badge {
+    background: #f4ebd0;
+    border: 1px solid #b8a98f;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    display: inline-block;
+    color: #5c4a3c;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* --- Secret Bookmark Tab Mechanical Anchors --- */
+.secret-bookmark-zone {
+    margin-top: 40px;
+    text-align: center;
+    display: none; 
+}
+
+.pull-bookmark-btn {
+    background: #8b5a2b;
+    color: #fff9e6;
+    border: 2px solid #a68c6d;
+    border-radius: 4px;
+    padding: 12px 35px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+
+.pull-bookmark-btn:hover {
+    background: #734a22;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* --- Grand Finale Antiqued Bouquet Frame --- */
+.finale-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(35, 30, 25, 0.6);
+    z-index: 20;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.pressed-flower-card {
+    background: #faf5eb;
+    width: 100%;
+    max-width: 650px;
+    border: 3px dashed #b8a98f;
+    border-radius: 4px;
+    box-shadow: 0 25px 55px rgba(0,0,0,0.3);
+    padding: 40px 30px;
+    position: relative;
+    text-align: center;
+    animation: finaleOpenPop 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes finaleOpenPop {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.finale-exit {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.pressed-bouquet-header {
+    font-size: 1.3rem;
+    color: #735d41;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d4c5b3;
+    padding-bottom: 8px;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+/* Real Polaroid Frame Structure for the User Photo */
+.vintage-photo-polaroid {
+    background: #fff;
+    padding: 15px 15px 30px 15px;
+    width: 240px;
+    margin: 0 auto 35px auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 1px solid #eae5da;
+    transform: rotate(2deg);
+    transition: transform 0.3s;
+}
+
+.vintage-photo-polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.polaroid-snapshot {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    filter: sepia(0.15) contrast(0.95); /* Soft vintage overlay tint matches album theme */
+    border: 1px solid #dcd7cc;
+}
+
+.vintage-caption {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #6e5c4f;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.antique-birthday-seal {
+    background: #f4eedf;
+    padding: 20px;
+    border: 1px solid #d4c5b3;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.antique-hbd-text {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #5c4a3c;
+    margin-bottom: 6px;
+}
+
+.antique-hbd-sub {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #8b7865;
+}
+
+/* Final Reassuring Handwritten Document Target */
+.handwritten-promise-block {
+    background: #fdfcf7;
+    border: 1px solid #e6dcc5;
+    border-left: 4px solid #8b7355;
+    padding: 25px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2b221a;
+    white-space: pre-wrap;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+    font-weight: bold;
+}
+
+/* Custom Webkit Scrollbars matching Sepia Parchment aesthetics */
+.crusty-paper-sheet::-webkit-scrollbar, .pressed-flower-card::-webkit-scrollbar {
+    width: 5px;
+}
+.crusty-paper-sheet::-webkit-scrollbar-thumb, .pressed-flower-card::-webkit-scrollbar-thumb {
+    background: #c8b99d;
+    border-radius: 3px;
+}
+
+@media (max-width: 680px) {
+    .diary-scroll-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .diary-header h1 { font-size: 2rem; }
+    .diary-inside-page { padding: 25px 15px; }
+    .vintage-photo-polaroid { width: 200px; }
+    .polaroid-snapshot { height: 170px; }
+}
